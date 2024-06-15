@@ -1,0 +1,24 @@
+<!-- guessing_game/game/templates/guess.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guessing Game</title>
+</head>
+<body>
+    <h1>Guess the Number</h1>
+    <p>You have {{ attempt_left }} attempts left.</p>
+    {% if result %}
+        <h2>{{ result }}</h2>
+    {% endif %}
+    {% if msg %}
+        <p>{{ msg }}</p>
+    {% endif %}
+    <form method="post">
+        {% csrf_token %}
+        <label for="num">Enter your guess:</label>
+        <input type="number" id="num" name="num" required>
+        <button type="submit">Guess</button>
+    </form>
+</body>
+</html>
