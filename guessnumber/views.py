@@ -16,7 +16,7 @@ def Guess(request):
     for i in range(10,1,-1):
         if number%i==0:
             div=i
-            qstn = f'X is a multiply of {div}'
+            qstn = f" 'X' is a multiply of {div}"
             break
         else:
             qstn=f'X is a prime number'
